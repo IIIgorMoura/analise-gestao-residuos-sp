@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 from streamlit_tags import st_tags
 
 # Configurações  iniciais
-st.set_page_config(page_title="Dashboard de Residuos", page_icon="☢️", layout="wide")
+st.set_page_config(page_title="Dashboard de Residuos", page_icon="♻️", layout="wide")
 
 # Carregar dados
 df_soma = pd.read_excel('./DF/somas_total_2013_2024.xlsx')
@@ -171,11 +171,11 @@ df_selecao_mensal_long['mes_ano'] = pd.to_datetime(df_selecao_mensal_long['mes_a
 
 # Números gerais
 def Home():
-    st.title('Coletas de lixo de 2013 a 2024')
+    st.title('Análise da Gestão de Resíduos Sólidos Urbanos em SP de 2013 a 2024')
 
-    total_vendas = df_selecao_soma['soma_total'].sum()
+    total_coletado = df_selecao_soma['soma_total'].sum()
 
-    st.metric('Total coletado', value=f"{total_vendas:.2f}", border=True)
+    st.metric('Total coletado no período (Toneladas)', value=f"{total_coletado:.2f}", border=True)
 
 # Graficos do total gerado por mês com previções de 2021 - 2025. Comparando com os dados que já existem
 def previsao():
@@ -184,7 +184,7 @@ def previsao():
         df_selecao_soma_mensal_long,
         x= 'meses/ano',
         y='total_geral',
-        title='Total coletado ao longo dos anos',
+        title='Total coletado mensalmente no período',
         labels={
             'total_geral': 'Total Geral',
             'meses/ano': 'Tempo'
@@ -224,7 +224,7 @@ def previsao():
     ))
     
     fig_linha_previcao.update_layout(
-        title='Total coletado ao longo dos anos com previsão',
+        title='Total coletado mensalmente: predição exploratória da série temporal (ARIMA)',
         xaxis=dict(
             showgrid=True,
             title='Tempo'  # Rótulo do eixo X
@@ -258,9 +258,9 @@ def previsao():
 
     metric1, metric2 = st.columns(2)
     with metric1:
-        st.metric('Média de coleta de 2013', value=f"{media_2013:.0f}", border=True)
+        st.metric('Média de coleta mensal em 2013 (Toneladas)', value=f"{media_2013:.0f}", border=True)
     with metric2:
-        st.metric('Média de coleta de 2024', value=f"{media_2024:.0f}", border=True)
+        st.metric('Média de coleta mensal em 2024 (Toneladas)', value=f"{media_2024:.0f}", border=True)
 
 # Grafico do total gerado por mês separado pelo os tipos de resíduo
 def soma_tipo():
@@ -370,7 +370,7 @@ def proporcao():
         total_do_ano_1 = df_soma['soma_total'][df_soma['ano'] == ano_pie_1].iloc[0]
 
         st.plotly_chart(fig_pie1,  use_container_width=True)
-        st.metric(f'Total coletado no ano de {ano_pie_1}', value=f"{total_do_ano_1}", border=True)
+        st.metric(f'Total coletado no ano de {ano_pie_1} (Toneladas)', value=f"{total_do_ano_1}", border=True)
         
     with setor2:
 
@@ -396,7 +396,7 @@ def proporcao():
         total_do_ano_2 = df_soma['soma_total'][df_soma['ano'] == ano_pie_2].iloc[0]
         
         st.plotly_chart(fig_pie2,  use_container_width=True)
-        st.metric(f'Total coletado no ano de {ano_pie_2}', value=f"{total_do_ano_2}", border=True)
+        st.metric(f'Total coletado no ano de {ano_pie_2} (Toneladas)', value=f"{total_do_ano_2}", border=True)
     
 
 Home()
