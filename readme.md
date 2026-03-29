@@ -1,9 +1,5 @@
 # ♻️ Análise de Gestão de Resíduos Sólidos Urbanos (São Paulo)
-**Parceria Técnica: ONG Limpa Brasil**
-
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red.svg)](https://share.streamlit.io/)
-[![Pandas](https://img.shields.io/badge/Pandas-Data_Cleaning-green.svg)](https://pandas.pydata.org/)
+**Em parceria com a ONG Limpa Brasil**
 
 ## Visão Geral
 Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo (2013-2024), identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para a ONG Limpa Brasil.
@@ -17,7 +13,7 @@ A partir de 2021, observou-se uma queda atípica e inconsistente nos dados ofici
 * **Linguagem:** Python
 * **Manipulação de Dados:** Pandas, NumPy
 * **Visualização:** Plotly, Matplotlib (Gráficos interativos e estáticos)
-* **Machine Learning:** Regressão e Modelagem Preditiva para estimativa de volumes (2021-2025).
+* **Machine Learning:** Modelagem Preditiva utilizando ARIMA para estimativa de volumes (2021-2025).
 * **Deploy:** Streamlit (Dashboard interativo para apresentação de insights).
 
 ---
