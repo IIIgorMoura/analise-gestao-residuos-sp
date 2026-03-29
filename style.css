@@ -16,7 +16,7 @@
 }
 
 /* Background lojas e produtos */
-/* Fundo branco e texto preto nas caixas de filtro (lojas e produtos) */
+/* Fundo branco e texto preto nas caixas de filtro */
 .st-bc {
     background-color: #ffffff !important;
 }
@@ -40,10 +40,10 @@
 
 /* Aumentar o tamanho do título do header */
 section[data-testid="stSidebar"] h2 {
-    font-size: 1.8rem !important; /* ou experimente 2rem */
+    font-size: 1.8rem !important;
 }
 
-/* Aumenta o tamanho das labels "Lojas" e "Produtos" na sidebar */
+/* Aumenta o tamanho das labels na sidebar */
 section[data-testid="stSidebar"] p {
     font-size: 1.05rem ;
 }
