@@ -2,7 +2,7 @@
 **Em parceria com a ONG Limpa Brasil**
 
 ## Visão Geral
-Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo (2013-2024), identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para a ONG Limpa Brasil.
+Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo (2013-2024) com mais de 10.000 registros, identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para a ONG Limpa Brasil.
 
 ### Principal Desafio: A Lacuna de 2021
 A partir de 2021, observou-se uma queda atípica e inconsistente nos dados oficiais de coleta. O projeto investiga se essa redução é real ou fruto da diminuição de investimentos em monitoramento pós-pandemia, utilizando modelagem preditiva para preencher esse "vazio" informativo.
