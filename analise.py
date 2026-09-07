@@ -13,7 +13,7 @@ df_soma = pd.read_excel('./DF/somas_total_2013_2024.xlsx')
 df_tipos = pd.read_excel('./DF/tipo_residuos_total.xlsx')
 df_soma_mensal = pd.read_excel('./DF/total_mensal_fixed.xlsx')
 df_soma_mensal_estimativa = pd.read_excel('./DF/total_mensal_fixed_ESTIMATIVA.xlsx')
-df_previcao = pd.read_excel('./DF/previsoes_modelos.xlsx')
+df_previsao = pd.read_excel('./DF/previsoes_modelos.xlsx')
 df_mensal = pd.read_excel('./DF/2013-2021.xlsx')
 
 # Criar um filtro para retirar o total_geral para fazer somas
@@ -148,7 +148,7 @@ coluna_ano_previsao = [
         (2021 <= i <= 2025 and (i < 2025 or mes in ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct']))
 ]
 coluna_ano_previsao_datetime = pd.to_datetime(coluna_ano_previsao, format='%b/%y')
-df_selecao_previsao = df_previcao.query('ds in @coluna_ano_previsao_datetime')
+df_selecao_previsao = df_previsao.query('ds in @coluna_ano_previsao_datetime')
 
 
 # Ajustar df mensal 
@@ -186,8 +186,8 @@ def previsao():
         y='total_geral',
         title='Total coletado mensalmente no período',
         labels={
-            'total_geral': 'Total Geral',
-            'meses/ano': 'Tempo'
+            'total_geral': 'Total Geral (Toneladas)',
+            'meses/ano': 'Tempo (Meses)'
         }
     )
     
@@ -227,11 +227,11 @@ def previsao():
         title='Total coletado mensalmente: predição exploratória da série temporal (ARIMA)',
         xaxis=dict(
             showgrid=True,
-            title='Tempo'  # Rótulo do eixo X
+            title='Tempo (Meses)'  # Rótulo do eixo X
         ),
         yaxis=dict(
             showgrid=True,
-            title='Total Geral'  # Rótulo do eixo Y
+            title='Total Geral (Toneladas)'  # Rótulo do eixo Y
         ),
         template='plotly_white'  # Tema claro para destacar as grades
 )
@@ -253,7 +253,7 @@ def previsao():
 
     colunas_2024 = [f'{mes}/{i - 2000}'  for i in range(2013,2026)   if i == 2024  for mes in meses_previcao]
     colunas_2024_datatime = pd.to_datetime(colunas_2024, format='%b/%y')
-    filtro_2024 = df_previcao.query('ds in @colunas_2024_datatime')
+    filtro_2024 = df_previsao.query('ds in @colunas_2024_datatime')
     media_2024 = filtro_2024['Previsao_ARIMA'].values.mean()
 
     metric1, metric2 = st.columns(2)
@@ -281,8 +281,8 @@ def soma_tipo():
         color='tipo_residuo',  # Cada tipo de resíduo terá uma linha diferente
         title="Top 10 Tipos de Resíduos Coletados de 2013 a 2020",
         labels={
-            'mes_ano': 'Tempo',
-            'total': 'Total Coletado',
+            'mes_ano': 'Tempo (Meses)',
+            'total': 'Total Coletado (Toneladas)',
             'tipo_residuo': 'Tipo de Resíduo'
         },
         color_discrete_map=cores  # Usando a paleta de cores que você já definiu
@@ -310,7 +310,7 @@ def tipo_residuo_graficos():
         color_discrete_map=(cores),
         labels={
             'tipo_residuo': 'Tipos de Resíduo',
-            'total_anos': 'Total Geral'
+            'total_anos': 'Total Geral (Toneladas)'
         }
     )
 
