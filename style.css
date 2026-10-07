@@ -1,4 +1,3 @@
-
 /* Altera o fundo da sidebar */
 [data-testid="stSidebar"] {
     background-color: #2d93c6;
@@ -9,34 +8,37 @@
     color: #fff !important;
 }
 
+[data-testid="stSidebar"] [data-testid="stExpander"] summary,
+[data-testid="stSidebar"] [data-testid="stExpander"] summary:hover,
+[data-testid="stSidebar"] [data-testid="stExpander"] summary:focus,
+[data-testid="stSidebar"] [data-testid="stExpander"] summary:focus-visible,
+[data-testid="stSidebar"] [data-testid="stExpander"] summary:active,
+[data-testid="stSidebar"] details[open] summary {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
 /* Fundo das opções selecionadas (os "chips" dos multiselects) */
 .stMultiSelect span[data-baseweb="tag"] {
     background-color: #ffffff !important;
     color: #000000 !important;
 }
 
-/* Background lojas e produtos */
 /* Fundo branco e texto preto nas caixas de filtro */
 .st-bc {
     background-color: #ffffff !important;
 }
 
 /* Força texto preto em todos os elementos dentro da caixa */
-.st-bc    * {
+.st-bc * {
     color: #000000 !important;
 }
-
 
 /* Sobrescrevendo o fundo do menu lateral */
 .menu .container-xxl[data-v-5af006b8] {
     background-color: #ffffff !important;
     color: #000000 !important;
 }
-
-/* Cor do fundo do site */
-/* .en45cdb4, .e14ksaui0{
-    background-color: #909;
-} */
 
 /* Aumentar o tamanho do título do header */
 section[data-testid="stSidebar"] h2 {
@@ -45,17 +47,15 @@ section[data-testid="stSidebar"] h2 {
 
 /* Aumenta o tamanho das labels na sidebar */
 section[data-testid="stSidebar"] p {
-    font-size: 1.05rem ;
+    font-size: 1.05rem;
 }
 
-
-.st-emotion-cache-1dtefog.e1kosxz22 p{
+.st-emotion-cache-1dtefog.e1kosxz22 p {
     font-size: 1.1rem;
 }
 
-.st-emotion-cache-q8sj0.e1kosxz23{
+.st-emotion-cache-q8sj0.e1kosxz23 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
