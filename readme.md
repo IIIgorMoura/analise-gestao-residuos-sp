@@ -8,7 +8,6 @@
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Prophet](https://img.shields.io/badge/Prophet-008080?style=for-the-badge&logo=meta&logoColor=white)
 
 ## Visão Geral
 Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo, identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para o Instituto Limpa Brasil.
