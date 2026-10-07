@@ -1,19 +1,19 @@
-# ♻️ Análise de Gestão de Resíduos Sólidos Urbanos (São Paulo)
-**Em parceria com a ONG Limpa Brasil**
+# ♻️ Análise de Gestão de Resíduos Sólidos Urbanos em São Paulo
+**Em parceria com o Instituto Limpa Brasil**
 
 ## Visão Geral
-Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo (2013-2024) com mais de 10.000 registros, identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para a ONG Limpa Brasil.
+Este projeto analisa o histórico de coleta de resíduos sólidos na cidade de São Paulo, identificando um apagão de dados públicos a partir de 2021. Foram utilizadas técnicas de **Ciência de Dados e Machine Learning** para estimar o volume de resíduos não registrado e fornecer insights estratégicos para o Instituto Limpa Brasil.
 
 ### Principal Desafio: A Lacuna de 2021
-A partir de 2021, observou-se uma queda atípica e inconsistente nos dados oficiais de coleta. O projeto investiga se essa redução é real ou fruto da diminuição de investimentos em monitoramento pós-pandemia, utilizando modelagem preditiva para preencher esse "vazio" informativo.
+A partir de 2021, observou-se uma queda inconsistente nos dados oficiais de coleta. O projeto investiga se essa redução é real ou fruto de uma falha ou mudança de escopo da coleta de dados de acesso público, utilizando modelagem preditiva para fazer estimativas no período inconsistente e projeções para o futuro da coleta de RSU.
 
 ---
 
 ## Tecnologias e Ferramentas
 * **Linguagem:** Python
 * **Manipulação de Dados:** Pandas, NumPy
-* **Visualização:** Plotly, Matplotlib (Gráficos interativos e estáticos)
-* **Machine Learning:** Modelagem Preditiva utilizando ARIMA para estimativa de volumes (2021-2025).
+* **Visualização:** Plotly, Matplotlib
+* **Machine Learning:** Modelagem Preditiva utilizando Prophet para estimativa de volumes (2021-2027).
 * **Deploy:** Streamlit (Dashboard interativo para apresentação de insights).
 
 ---
@@ -21,10 +21,10 @@ A partir de 2021, observou-se uma queda atípica e inconsistente nos dados ofici
 ## Principais Insights e Metodologia
 
 1.  **Engenharia de Dados (ETL):** Integração de bases históricas e tratamento de inconsistências em dados públicos.
-2.  **Modelagem Preditiva:** Desenvolvimento de modelo para projetar o descarte de resíduos até 2025, mitigando a falta de transparência dos dados oficiais atuais.
-3.  **Análise de Impacto:** * O volume acumulado desde 2013 ocuparia **53% da área de São Caetano do Sul**.
-    * Identificação de que o **resíduo domiciliar** é o maior responsável pelo descarte irregular nas ruas, sugerindo falhas na infraestrutura de educação ambiental.
-4.  **Conformidade:** Análise baseada nas diretrizes da **Política Nacional de Resíduos Sólidos (PNRS)**.
+2.  **Modelagem Preditiva:** Desenvolvimento de modelo para projetar o descarte de resíduos até 2027, mitigando a falta de transparência dos dados oficiais atuais.
+3.  **Comparação de Modelos:** Experimento com ARIMA, Random Forest e Prophet, utilizando RMSE (Raiz do Erro Quadrático Médio), MAE (Erro Médio Absoluto) e MAPE (Erro Percentual Absoluto Médio) como métricas de validação e seleção, com o Prophet apresentando o melhor desempenho.
+4.  **Análise de Impacto:** O volume acumulado desde 2013 ocuparia **53% da área de São Caetano do Sul** e identificação de que o **resíduo domiciliar** é o maior responsável pelo descarte irregular nas ruas, sugerindo falhas na infraestrutura de educação ambiental.
+5.  **Conformidade:** Análise baseada nas diretrizes da **Política Nacional de Resíduos Sólidos (PNRS)**.
 
 ---
 
@@ -36,7 +36,7 @@ A partir de 2021, observou-se uma queda atípica e inconsistente nos dados ofici
 ---
 
 ## Publicações e Entregáveis
-* **Artigo Científico:** Submetido à revista *Mix Sustentabilidade*.
-* **Apresentação:** Pitch realizado para a diretoria da ONG Limpa Brasil.
+* **Artigo Científico:** Publicação no Congresso SENAI.
+* **Apresentação:** Pitch realizado para a diretoria do Instituto Limpa Brasil.
 
 ---
